@@ -1,0 +1,66 @@
+.goals__form {
+  display: flex;
+  flex-direction: column;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.goals-container {
+  font-size: 18px;
+  &__header {
+    padding-bottom: 30px;
+  }
+}
+.goals-list {
+  &__item {
+    padding-bottom: 20px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+}
+.goal-form-container {
+  padding: 20px;
+  font-size: 18px;
+  &__header {
+    padding-bottom: 30px;
+  }
+  &__section {
+    padding: 10px;
+  }
+}
+.daily-goal-container {
+  margin: 1rem 0;
+}
+.day-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  padding: 50px;
+  cursor: default;
+  z-index: 1;
+  &__overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  &__form {
+    width: 70%;
+    margin: 1rem 2rem 1rem 0;
+    height: 30px;
+    border: 1px solid #000;
+  }
+}

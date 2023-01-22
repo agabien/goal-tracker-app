@@ -1,0 +1,26 @@
+.quotes-container {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  height: 90vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateX(-50%);
+  &__header {
+    font-size: 18px;
+    margin-bottom: 5rem;
+  }
+  &__quote {
+    font-size: 36px;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  &__author {
+    font-size: 24px;
+    margin-bottom: 5rem;
+  }
+}

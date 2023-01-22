@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cel! Pal!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="hero">
+            <div class="hero__logo">
+                <img src="images/confirmation.png" alt="logo" class="hero__logo-img">
+                <h1 class="hero__title">Cel! Pal!</h1>
+            </div>
+            <h2 class="hero__subtitle">Twój osobisty menadżer celów</h2>
+        </div>
+        <nav>
+            <ul class="menu-desktop">
+                <li>
+                    <a class="cele menu-desktop__item">Cele</a>
+                </li>
+                <li>
+                    <a class="miesiac menu-desktop__item">Miesiąc</a>
+                </li>
+                <li>
+                    <a class="generate-quote-btn menu-desktop__item">Zainspiruj się!</a>
+                </li>
+            </ul>
+            <div class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="close-mobile-btn hidden">X
+            </div>
+            <ul class="menu-mobile hidden">
+                <li>
+                    <a class="cele menu-mobile__item">Cele</a>
+                </li>
+                <li>
+                    <a class="miesiac menu-mobile__item">Miesiąc</a>
+                </li>
+                <li>
+                    <a class="generate-quote-btn menu-mobile__item">Zainspiruj się!</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="wrapper">
+
+        <div class="container">
+
+            <section class="goals-container hidden layer">
+                <h2 class="goals-container__header">Twoje cele</h2>
+                <ul class="goals-container__goals-list"></ul>
+            </section>
+
+            <section class="goal-form-container hidden layer">
+                <h2 class="goal-form-container__header">Dodaj nowy cel</h2>
+
+                <form class="goal-form-container__form" action="index.html">
+                    <div class="goal-form-container__section">
+                        <label for="title">Cel: </label>
+                        <input type="text" id="title" required>
+                    </div>
+
+                    <div class="goal-form-container__section">
+                        <p>Chcesz ustawić alert?</p>
+                        <input type="radio" id="tak" name="alert" value="Tak">
+                        <label for="tak">Tak</label><br>
+                        <input type="radio" id="nie" name="alert" value="Nie" checked>
+                        <label for="nie">Nie</label><br>
+                    </div>
+
+                    <div class="goal-form-container__section">
+                        <label for="deadline-hours">Godzina rozpczęcia: </label>
+                        <input type="time" id="deadline-start" required>
+                    </div>
+
+                    <div class="goal-form-container__section">
+                        <label for="deadline-minutes">Godzina zakończenia: </label>
+                        <input type="time" id="deadline-stop" required>
+                    </div>
+
+                    <div class="goal-form-container__section">
+                        <label for="date">Data zakończenia: </label>
+                        <input type="date" id="date" min="2022-01-01" max="2025-12-31">
+                    </div>
+
+                    <div class="goal-form-container__section">
+                        <label for="comment">Komentarz: </label>
+                        <textarea id="comment" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div class="goal-form-container__section">
+                        <input type="submit" id="submit" class="btn btn-green" value="Dodaj cel">
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="calendar-wrapper">
+                <div class="calendar layer">
+                    <div class="month">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="date">
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Pon</div>
+                        <div>Wt</div>
+                        <div>Śr</div>
+                        <div>Czw</div>
+                        <div>Pt</div>
+                        <div>Sb</div>
+                        <div>Ndz</div>
+                    </div>
+                    <div class="days"></div>
+                </div>
+            </section>
+
+
+            <section class="day-box hidden layer"></section>
+            <div class="day-box__overlay hidden"></div>
+
+            <section class="quotes-container hidden layer">
+            </section>
+
+            <section class="buttons-container">
+                <button class="add-goal-btn btn btn-red hidden">Wprowadź nowy cel</button>
+                <button class="add-next-goal-btn hidden btn btn-green">Chcę dodać kolejny cel</button>
+                <button class="display-all-goals-btn hidden btn btn-red">Pokaż moje cele</button>
+                <button class="display-calendar-btn hidden btn btn-red">Przejdź do kalendarza</button>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

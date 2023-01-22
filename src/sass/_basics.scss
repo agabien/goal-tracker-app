@@ -1,0 +1,47 @@
+@import "./mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-green {
+  @include button(#ffffff, #5cb85c, #4cae4c);
+}
+
+.btn-red {
+  @include button(#ffffff, #d9534f, #d43f3a);
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.dayChecked {
+  border: 3px solid red;
+}
+
+.hidden {
+  display: none;
+}
